@@ -1,7 +1,24 @@
 {
+  "name": "inter-study",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node backend/server",
+    "server": "nodemon backend/server",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "keywords": [],
+  "author": "Yeasir Ahamed",
+  "license": "ISC",
   "dependencies": {
+    "concurrently": "^7.6.0",
     "express": "^4.18.2",
-    "mongoose": "^7.0.2",
+    "mongoose": "^7.0.2"
+  },
+  "devDependencies": {
     "nodemon": "^2.0.21"
   }
 }
