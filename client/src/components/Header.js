@@ -9,13 +9,16 @@ const Header = ({ theme, setTheme }) => {
   return (
     <div className="border-b dark:border-gray-600 py-3">
       <div className="flex justify-between">
-        <Link to="/" className="text-xl font-bold uppercase px-2">
+        <Link
+          to="/"
+          className="text-xl font-bold uppercase px-2 transition ease-out delay-75 hover:text-gray-700 dark:hover:text-gray-400"
+        >
           Inter-Study
         </Link>
         <div className="flex justify-between items-center">
           <button
             onClick={handleThemeSwitch}
-            className="border rounded-full border-gray-300 bg-gray-300 px-1.5 py-1.5 mr-5"
+            className="border rounded-full border-gray-300 bg-gray-300 hover:bg-gray-400 hover:border-gray-400 transition ease-out delay-75 px-1.5 py-1.5 mr-5"
           >
             {theme === 'light' ? (
               <CiLight className="text-black text-xl" />
@@ -25,13 +28,13 @@ const Header = ({ theme, setTheme }) => {
           </button>
           <Link
             to="/sign-up"
-            className="px-4 py-1.5 dark:text-gray-900 font-semibold bg-gray-200 rounded-md mr-5"
+            className="px-4 py-1.5 dark:text-gray-900 hover:bg-gray-400 transition ease-out delay-75 font-semibold bg-gray-200 rounded-md mr-5"
           >
             Signup
           </Link>
           <Link
             to="/login"
-            className="px-4 py-1.5 dark:text-gray-900 font-semibold bg-gray-200 rounded-md mr-2"
+            className="px-4 py-1.5 dark:text-gray-900 font-semibold hover:bg-gray-400 transition ease-out delay-75 bg-gray-200 rounded-md mr-2"
           >
             Login
           </Link>

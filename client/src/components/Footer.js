@@ -8,7 +8,7 @@ const Footer = () => {
         href="https://twitter.com/yeasir99"
         target="_blank"
         rel="noreferrer"
-        className="text-center block text-blue-500"
+        className="text-center block text-blue-500 font-semibold"
       >
         Yeasir Ahamed
       </a>
