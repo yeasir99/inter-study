@@ -3,6 +3,7 @@ import Home from './components/Home';
 import Login from './components/Login';
 import Signup from './components/signup';
 import { useState, useEffect } from 'react';
+import Header from './components/Header';
 
 function App() {
   const [theme, setTheme] = useState('light');
@@ -21,14 +22,10 @@ function App() {
     }
   }, [theme]);
 
-  const handleThemeSwitch = () => {
-    setTheme(theme === 'dark' ? 'light' : 'dark');
-  };
-
   return (
     <div className="bg-white dark:bg-gray-800">
       <div className="max-w-screen-xl mx-auto">
-        <header>Main header goes here</header>
+        <Header theme={theme} setTheme={setTheme} />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/signin" element={<Login />} />
